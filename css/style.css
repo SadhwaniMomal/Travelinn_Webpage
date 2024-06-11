@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.bg-container {
+  background-image: url("../image/bg-container-1.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  /* opacity: 0.8; */
+}
+
+/* Navbar CSS Start Here */
+.navbar-nav .nav-item .nav-link {
+  color: #0066b2 !important;
+  /* margin-right: 25px; */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #0066b2 !important;
+}
+
+.navbar-nav .nav-item .navlink-login {
+  border: 1px solid #0066b2;
+  padding: 10px;
+}
+.navbar-nav .nav-item .navlink-register {
+  border: 1px solid #0066b2;
+  color: white !important;
+  background-color: #0066b2;
+  padding: 10px;
+}
+.navbar-nav .nav-item .navlink-register:hover {
+  color: white !important;
+}
+.navbar-menu {
+  background-color: transparent;
+  border: 0.5 solid #0066b2;
+}
+
+/* Default style for nav links */
+.nav-link {
+  font-weight: normal;
+  position: relative;
+}
+
+/* Style for the active nav link */
+/* Default style for nav links */
+.navbar .nav-link {
+  font-weight: normal;
+  position: relative;
+}
+
+/* Style for the active nav link */
+.navbar .nav-link.active {
+  font-weight: bold;
+}
+
+.navbar .nav-link.active::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #0066b2;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-link.active::after {
+    display: none;
+  }
+}
+
+/* Navbar CSS end Here */
+
+/* Heading css start here */
+.explore-heading .heading {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 36pt !important;
+}
+
+.explore-heading .exploremore {
+  border: 1px solid #0066b2;
+  color: white !important;
+  background-color: #0066b2;
+  border-radius: 15px;
+}
+
+.explore-heading .viewoffers {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 15px;
+}
+.heading {
+  position: relative;
+  display: inline-block;
+}
+
+.btn {
+  min-width: 150px;
+}
+.heading-icon {
+  /* margin-left: 10px; */
+  position: absolute;
+  right: 200px; /*Adjust this value to position the icon as needed*/
+  top: 32%;
+  transform: translateY(-50%);
+  font-size: 3rem; /* Adjust the icon size as needed */
+  background: transparent;
+}
+
+.slide-icons .icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+/* Heading css end here */
+
+/* Form buttons */
+#oneWay-tab {
+  color: #0066b2;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(48, 47, 47, 0.54);
+}
+
+#roundTrip-tab,
+#multiTrip-tab {
+  color: white;
+  background-color: rgba(48, 47, 47, 0.54);
+  font-weight: bold;
+}
+
+.book-form label {
+  color: #0066b2;
+  font-weight: bold;
+}
+
+.book-form button {
+  background-color: #0066b2;
+  color: white;
+}
+
+.active-tab {
+  background-color: white !important;
+  color: #0066b2 !important;
+}
+
+.my-form-icon {
+  font-size: 11px;
+  color: #0066b2;
+  left: 10px; /* Adjusted for better alignment */
+  top: 50%; /* Centered vertically */
+  transform: translateY(-50%);
+}
+.my-form-control {
+  padding-left: 30px; /* Adjusted for better alignment */
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+/* Form buttons */
+
+/* choose section css start here */
+.choose hr {
+  border: none; /* Remove default border */
+  border: 3px solid #0b4978; /* Set the color and style of the line */
+  border-radius: 5px;
+  width: 10%; /* Adjust the width of the line */
+  /* margin: auto; Center the line horizontally */
+}
+
+.card {
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-body i {
+  text-align: center;
+  background-color: rgb(185, 210, 232);
+  color: #0066b2;
+  font-size: 20px;
+  border-radius: 50%; /* Make it a circle */
+  text-align: center;
+  padding: 15px;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Make it the same as width for a perfect circle */
+}
+
+/* global guide  */
+.gobal {
+  color: peru;
+  font-style: italic;
+  font-size: larger;
+}
+.guide {
+  color: #0066b2;
+  font-style: italic;
+  font-size: larger;
+}
+
+/* cards  */
+.card-body .round-btn i {
+  background-color: white !important;
+  border-radius: 45px !important;
+  padding: 7px !important;
+  font-size: 15px !important;
+}
+.view-btn {
+  background: #0b4978 !important;
+}
+.card-custom {
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.round-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Special  */
+.circle-background {
+  background-color: #0b4978; /* You can change this color as needed */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  padding: 22px;
+}
+.circle-backgrounds {
+  /* background-color: #0b4978; You can change this color as needed */
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  padding: 20px;
+}
+
+.circle-background i {
+  color: #fff; /* You can change this color as needed */
+}
+
+/* Special  */
+
+/* about us */
+
+.about-container .round-btn i,
+.services-container .round-btn i {
+  display: inline-block;
+  background-color: #cee4f5;
+  color: #0066b2;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 5px;
+  width: 90px;
+  height: 40px;
+  line-height: 30px;
+  border-radius: 25px;
+}
+
+.about-container .exploremore,
+.services-container .exploremore {
+  border: 1px solid #0066b2;
+  color: white !important;
+  background-color: #0066b2;
+}
+
+.image-container img {
+  height: 500px;
+  width: 100%;
+  border-start-end-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* about us */
+
+/* Test  */
+
+.test-container .round-btn i {
+  display: inline-block; /* Ensure the icon behaves as a block element */
+  background-color: #cee4f5;
+  color: #0066b2;
+  font-size: 25px;
+  text-align: center; /* Adjust padding for better alignment */
+  padding: 10px;
+  width: 150px;
+  height: 40px; /* Center the icon vertically */
+  border-top-left-radius: 25px; /* Left side top */
+  border-bottom-left-radius: 25px; /* Left side bottom */
+  border-top-right-radius: 25px; /* Right side top */
+  border-bottom-right-radius: 25px; /* Right side bottom */
+}
+.my-star i {
+  font-size: 13px;
+  color: #0b4978;
+}
+
+.my-star {
+  position: absolute;
+  left: 310px;
+  top: 35px;
+}
+
+.my-start-icon {
+  position: absolute;
+  bottom: -20px;
+  right: 5px;
+}
+
+.my-four {
+  position: absolute;
+  bottom: -20px;
+  right: 3px;
+  color: #0b4978;
+}
+
+.my-eight {
+  position: absolute;
+  bottom: -40px;
+  right: 5px;
+  color: #0b4978;
+}
+
+.view-btn {
+  background-color: transparent !important;
+  border: 1px solid #0b4978 !important;
+  color: #0b4978 !important;
+  width: fit-content;
+  border-radius: 15px;
+}
+/* Test  */
+
+/* choose section css end here */
+
+/* footer start here  */
+.travelinn {
+  color: #0b4978;
+  font-weight: bold;
+  font-size: xx-large;
+}
+/* footer end here  */
+
+/* Whatapp cs  */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25d366;
+  color: white;
+  border-radius: 100px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.whatsapp-chat i {
+}
+/* Whatapp cs  */

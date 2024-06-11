@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Responsive</title>
+    <!-- Bootstrap CDN CSS  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CDN JS  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font CDN ICON  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom css  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Custom js -->
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- main start our body -->
+    <div class="container-fluid bg-container">
+      <!-- Navbar Start here -->
+      <nav class="navbar navbar-expand-lg border-2">
+        <div class="container-fluid">
+          <img src="./image/logo.png" alt="" style="height: 5%; width: 7%" />
+          <button
+            class="navbar-menu d-lg-none outline-none border border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars text-white fs-1 border border-0"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- home anchor -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-dot px-3" href="#">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <!-- login register -->
+            <ul class="navbar-nav ms-lg-2 mb-sm-2 mb-lg-0 col-lg-3">
+              <li class="nav-item mb-sm-2">
+                <a
+                  class="nav-link navlink-login btn my-lg-0 me-lg-2 px-sm-2"
+                  href="#"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link navlink-register btn my-lg-0 px-sm-2"
+                  href="#"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End here -->
+
+      <!-- Heading Start here -->
+      <div class="row py-5 px-3 justify-content-evenly">
+        <div class="col-md-6 explore-heading position-relative">
+          <h1 class="fw-bold fs-1 heading">
+            The Next Great Neighborhood of Fort Worth With Travellin
+          </h1>
+          <p class="">
+            Travel Agencies that provide round trip, one way, and multi trip
+            services for those of you like me who have the flexibility to choose
+            a vacation
+          </p>
+          <div class="">
+            <button class="btn exploremore py-sm-3 w-25 mx-2">
+              Explore More
+            </button>
+            <button class="btn viewoffers py-sm-3 w-25 mx-2">
+              View Offers
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative border-3">
+          <i
+            class="fa-solid fa-circle-chevron-right heading-icon text-light d-none d-lg-inline"
+          ></i>
+        </div>
+      </div>
+      <!-- Heading End here -->
+
+      <!-- Form start here -->
+      <div class="container py-4 px-2 border-3">
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="flightBookingTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active border border-0 rounded-end-0"
+              id="oneWay-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#oneWay"
+              type="button"
+              role="tab"
+              aria-controls="oneWay"
+              aria-selected="true"
+            >
+              One Way
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link border border-0 rounded-start-0 rounded-top-0"
+              id="roundTrip-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#roundTrip"
+              type="button"
+              role="tab"
+              aria-controls="roundTrip"
+              aria-selected="false"
+            >
+              Round Trip
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link border border-0 rounded-top-0"
+              id="multiTrip-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#multiTrip"
+              type="button"
+              role="tab"
+              aria-controls="multiTrip"
+              aria-selected="false"
+            >
+              Multi Trip
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="flightBookingTabsContent">
+          <!-- One Way Form -->
+          <div
+            class="tab-pane fade show active"
+            id="oneWay"
+            role="tabpanel"
+            aria-labelledby="oneWay-tab"
+          >
+            <div class="row my-0 mt-0 mx-0 mb-0 row-form">
+              <div
+                class="col-md-12 bg-white text-black m-0 pb-5 pt-2 rounded-end rounded-bottom my-0"
+              >
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Round Trip Form -->
+          <div
+            class="tab-pane fade"
+            id="roundTrip"
+            role="tabpanel"
+            aria-labelledby="roundTrip-tab"
+          >
+            <div class="row my-0 mt-0 mx-0 mb-0 row-form">
+              <div
+                class="col-md-12 bg-white text-black m-0 pb-5 pt-2 rounded-end rounded-bottom my-0"
+              >
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Multi Trip Form -->
+          <div
+            class="tab-pane fade"
+            id="multiTrip"
+            role="tabpanel"
+            aria-labelledby="multiTrip-tab"
+          >
+            <div class="row my-0 mt-0 mx-0 mb-0 row-form">
+              <div
+                class="col-md-12 bg-white text-black m-0 pb-5 pt-2 rounded-end rounded-bottom my-0"
+              >
+                <!-- form 1 -->
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <!-- form 2 -->
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <!-- form3 -->
+                <form action="">
+                  <div class="row">
+                    <!-- From -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="form" class="col-form-label my-1">Form</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- To -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="top" class="col-form-label my-1">To</label>
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="ali, Indonesia"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-location-dot"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Expected date -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="expectedDate" class="col-form-label my-1"
+                        >Expected Date</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="datetime-local"
+                          aria-dropeffect="move"
+                          placeholder="02-06-2020"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-calendar-days"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Number of travellers -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="travellersNumber" class="col-form-label my-1"
+                        >Number of Travellers</label
+                      >
+                      <div class="position-relative">
+                        <input
+                          type="text"
+                          placeholder="02"
+                          class="form-control my-form-control py-1"
+                        />
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-user"
+                        ></i>
+                      </div>
+                    </div>
+                    <!-- Class -->
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="class" class="col-form-label my-1"
+                        >Class</label
+                      >
+                      <div class="position-relative">
+                        <select
+                          class="form-control my-form-control py-1"
+                          id="class"
+                        >
+                          <option selected>Choose...</option>
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First Class</option>
+                        </select>
+                        <i
+                          class="my-form-icon position-absolute fa-solid fa-phone"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 mb-3 book-form">
+                      <label for="moreOptions" class="col-form-label my-1"
+                        >More Options</label
+                      >
+                      <button type="submit" class="btn d-block text-white">
+                        Search Flight
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Form End here -->
+    </div>
+    <!-- main start our body -->
+
+    <!-- why coose start here -->
+    <div class="container choose my-5">
+      <h2 class="text-center my-2">Why Choose Us</h2>
+      <hr class="m-auto mb-4" />
+
+      <!-- Card start here -->
+      <div class="row my-3">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-4 icons">
+                <i class="fas fa-map-marker-alt me-2"></i>
+              </div>
+              <h5 class="card-title mb-4">Best Travel Agency</h5>
+              <p class="card-text text-muted">
+                Travel agencies that provide round trip, one way, multi-trip
+                services.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-4">
+                <i class="fa-solid fa-dollar-sign me-2"></i>
+              </div>
+              <h5 class="card-title mb-4">Competitive Price</h5>
+              <p class="card-text text-muted">
+                The prices offered are affordable starting from the ordinary to
+                the exclusive.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-4">
+                <i class="fa-solid fa-globe me-2"></i>
+              </div>
+              <h5 class="card-title mb-4">Global Coverage</h5>
+              <p class="card-text text-muted">
+                There are many tourist attractions, hotels, and interesting
+                entertainment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card  End here-->
+
+      <!-- Global Guide start here -->
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+            <span class="gobal">GLOBAL</span> <span class="guide">GUIDE</span>
+            <p class="fs-6">TRAVEL AND TOURISM LLC</p>
+            <h2 class="fs-6 fw-bold">Online Travel Portal</h2>
+            <p class="text-muted">
+              We are the best food maker and delivery restaurant for our
+              customers. Find your favorite restaurant available in your zone.
+              We have more than 1000 menus online. It's quick, easy, and totally
+              secure.
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+            <span class="gobal">GLOBAL</span> <span class="guide">GUIDE</span>
+            <p class="fs-6">TRAVEL AND TOURISM LLC</p>
+            <h2 class="fs-6 fw-bold">B2B Online Portal</h2>
+            <p class="text-muted">
+              We are the best food maker and delivery restaurant for our
+              customers. Find your favorite restaurant available in your zone.
+              We have more than 1000 menus online. It's quick, easy, and totally
+              secure.
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+            <span class="gobal">GLOBAL</span> <span class="guide">GUIDE</span>
+            <p class="fs-6">TRAVEL AND TOURISM LLC</p>
+            <h2 class="fs-6 fw-bold">Corporate Travel Management</h2>
+            <p class="text-muted">
+              We are the best food maker and delivery restaurant for our
+              customers. Find your favorite restaurant available in your zone.
+              We have more than 1000 menus online. It's quick, easy, and totally
+              secure.
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+            <span class="gobal">GLOBAL</span> <span class="guide">GUIDE</span>
+            <p class="fs-6">TRAVEL AND TOURISM LLC</p>
+            <h2 class="fs-6 fw-bold">Global Tours</h2>
+            <p class="text-muted">
+              We are the best food maker and delivery restaurant for our
+              customers. Find your favorite restaurant available in your zone.
+              We have more than 1000 menus online. It's quick, easy, and totally
+              secure.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Global Guide end here -->
+
+      <!--special offer start here  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="d-flex justify-content-between align-items-center mb-3 special-offer"
+            >
+              <h2 class="my-3">Special Offer</h2>
+              <div class="icon-container d-flex align-items-center">
+                <div class="circle-backgrounds">
+                  <i class="fas fa-chevron-left m-0 text-secondary"></i>
+                </div>
+                <div class="circle-background">
+                  <i class="fas fa-chevron-right p-0"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card-1.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Green Canyon Waterfall</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Bali Indonesia
+                      </p>
+                      <p class="align-items-end">$124.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card-2.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Blue Lagoon</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Iceland
+                      </p>
+                      <p class="align-items-end">$200.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card-3.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Grand Canyon</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Arizona, USA
+                      </p>
+                      <p class="align-items-end">$150.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card4.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Green Canyon Waterfall</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Bali Indonesia
+                      </p>
+                      <p class="align-items-end">$124.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card5.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Blue Lagoon</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Iceland
+                      </p>
+                      <p class="align-items-end">$200.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-8 col-lg-4 mb-4">
+              <div
+                class="card text-white card-custom"
+                style="background-image: url('./image/card6.jpg')"
+              >
+                <div
+                  class="card-body d-flex flex-column justify-content-between rounded"
+                  style="height: 100%"
+                >
+                  <div>
+                    <div
+                      class="row justify-content-between align-items-start mb-3"
+                    >
+                      <div class="col-auto round-btn my-3">
+                        <i class="text-decoration-none fs-6">Round Trip</i>
+                      </div>
+                      <div class="col-auto my-0">
+                        <i
+                          class="fa-regular fa-heart bg-transparent text-white"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="card-title mb-0">Grand Canyon</h5>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text mb-0">
+                        <i
+                          class="fa-solid fa-location-dot bg-transparent text-white"
+                        ></i>
+                        Arizona, USA
+                      </p>
+                      <p class="align-items-end">$150.00</p>
+                    </div>
+                    <a
+                      href="#"
+                      class="btn view-btn mt-2 w-100 py-2 px-2 rounded text-white fs-5"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--special offer end here -->
+
+      <!-- About Us start here -->
+      <div class="container py-3">
+        <div class="row align-items-stretch">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <div
+              class="about-container h-100 d-flex flex-column justify-content-center"
+            >
+              <div class="col-auto round-btn py-2">
+                <i class="text-decoration-none fs-6">About Us</i>
+              </div>
+              <h2 class="fw-bold fs-1">
+                Explore all corners of the world with us
+              </h2>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                quis leo eget dui gravida fermentum. Nulla facilisi. Integer
+                euismod, risus id ullamcorper auctor, ipsum ex ultricies eros, a
+                accumsan sapien lorem et metus.
+              </p>
+              <button class="btn exploremore rounded py-lg-3 w-25 mx-2 mb-2">
+                Explore More
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-center m-auto">
+            <div
+              class="image-container h-100 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="image/about-1.jpg"
+                class="img-fluid"
+                alt="About Us Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About Us end here -->
+
+      <!-- Services start here -->
+      <div class="container py-3">
+        <div class="row align-items-stretch">
+          <div
+            class="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-md-1 text-center m-auto"
+          >
+            <div
+              class="image-container h-100 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="image/about-1.jpg"
+                class="img-fluid mx-0"
+                alt="Service Image"
+              />
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-md-2 py-4 px-4"
+          >
+            <div
+              class="services-container h-100 d-flex flex-column justify-content-center"
+            >
+              <div class="col-auto round-btn">
+                <i class="text-decoration-none fs-6">Service</i>
+              </div>
+              <h2 class="fw-bold fs-1 mx-5 my-3">
+                Get to know more about professional tour guides
+              </h2>
+              <p class="text-muted mx-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                quis leo eget dui gravida fermentum. Nulla facilisi. Integer
+                euismod, risus id ullamcorper auctor, ipsum ex ultricies eros, a
+                accumsan sapien lorem et metus.
+              </p>
+              <button class="btn exploremore rounded py-lg-3 w-25 mx-5">
+                Explore More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Services end here -->
+
+      <!-- Termoinal start here -->
+      <div class="container test-container my-5">
+        <div class="col-auto round-btn text-center">
+          <i class="text-decoration-none fs-6 text-center">Testimonal</i>
+        </div>
+        <h2 class="text-center my-3">What our customers saying</h2>
+
+        <!-- Card start here -->
+        <div class="row my-3">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4 mt-0 icons">
+                  <img
+                    src="./image/usericon.png"
+                    alt=""
+                    class="rounded"
+                    style="width: 15%"
+                  />
+                  <div
+                    class="d-flex align-items-center w-100 position-relative"
+                  >
+                    <div class="my-2 mx-3">
+                      <h5 class="card-title">Best Travel Agency</h5>
+                      <p class="text-muted">Sukabumi, Indonesia</p>
+                    </div>
+                    <div class="d-flex align-items-end my-star">
+                      <i
+                        class="fa-solid fa-star my-start-icon bg-transparent"
+                      ></i>
+                      <p class="my-four">4.</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-end border border-dark my-star"
+                    >
+                      <p class="my-eight">8</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-text my-card-text text-muted">
+                  Travel agencies that provide round trip, one way, multi-trip
+                  services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4 mt-0 icons">
+                  <img
+                    src="./image/usericon.png"
+                    alt=""
+                    class="rounded"
+                    style="width: 15%"
+                  />
+                  <div
+                    class="d-flex align-items-center w-100 position-relative"
+                  >
+                    <div class="my-2 mx-3">
+                      <h5 class="card-title">Best Travel Agency</h5>
+                      <p class="text-muted">Sukabumi, Indonesia</p>
+                    </div>
+                    <div class="d-flex align-items-end my-star">
+                      <i
+                        class="fa-solid fa-star my-start-icon bg-transparent"
+                      ></i>
+                      <p class="my-four">4.</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-end border border-dark my-star"
+                    >
+                      <p class="my-eight">8</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-text my-card-text text-muted">
+                  Travel agencies that provide round trip, one way, multi-trip
+                  services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4 mt-0 icons">
+                  <img
+                    src="./image/usericon.png"
+                    alt=""
+                    class="rounded"
+                    style="width: 15%"
+                  />
+                  <div
+                    class="d-flex align-items-center w-100 position-relative"
+                  >
+                    <div class="my-2 mx-3">
+                      <h5 class="card-title">Best Travel Agency</h5>
+                      <p class="text-muted">Sukabumi, Indonesia</p>
+                    </div>
+                    <div class="d-flex align-items-end my-star">
+                      <i
+                        class="fa-solid fa-star my-start-icon bg-transparent"
+                      ></i>
+                      <p class="my-four">4.</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-end border border-dark my-star"
+                    >
+                      <p class="my-eight">8</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-text my-card-text text-muted">
+                  Travel agencies that provide round trip, one way, multi-trip
+                  services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Termoinal end here -->
+
+      <!-- View all start here -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <a class="btn my-lg-0 me-lg-2 px-sm-2 view-btn py-3 px-3" href="#"
+            >View all review</a
+          >
+        </div>
+      </div>
+      <!-- View all start here -->
+    </div>
+    <!-- why coose end here -->
+    <!-- footer start here  -->
+      <footer class="container-fluid px-5 py-5 ">
+        <div class="row">
+          <!-- Logo and Social Icons Section -->
+          <div class="col-12 col-lg-4 text-center text-lg-start">
+            <p class="travelinn">Travelinn.</p>
+            <div class="social-icons">
+                <p class="text-muted  w-75">At the beginning of the year I have to give at work the vacation dates</p>
+            </div>
+            <div class="contact-icons">
+                <p class="text-muted  w-75">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>  Email: Support@travelinn.com
+                </p>
+                <p class="text-muted w-75">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Call: 023-691-456-987
+                </p>
+            </div>
+        </div>
+        
+          <!-- Links Section -->
+          <div class="col-12 col-lg-8">
+            <div class="row justify-content-center">
+              <!-- Women's Section -->
+              <div
+                class="col-12 col-md-3 mb-4 mb-md-0 text-center text-md-start"
+              >
+                <h5 class="text-black">Our Service</h5>
+                <ul class="list-unstyled">
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >Round Trip</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >One Way</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >Multi Trip</a
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+
+              <!-- <div class="w-100 d-block d-md-none"></div> -->
+              <!-- Line break for small devices -->
+
+              <!-- Men's Section -->
+              <div
+                class="col-12 col-md-3 mb-4 mb-md-0 text-center text-md-start"
+              >
+                <h5 class="text-black">Our Product</h5>
+                <ul class="list-unstyled">
+                  <ul class="list-unstyled">
+                    <li class="py-2">
+                      <a href="#" class="text-muted text-decoration-none text-black"
+                        >Mountain</a
+                      >
+                    </li>
+                    <li class="py-2">
+                      <a href="#" class="text-muted text-decoration-none text-black"
+                        >Beach</a
+                      >
+                    </li>
+                    <li class="py-2">
+                      <a href="#" class="text-muted text-decoration-none text-black"
+                        >Waterfall</a
+                      >
+                    </li>
+                    
+                  </ul>
+              </div>
+
+              <!-- <div class="w-100 d-block d-md-none"></div> -->
+              <!-- Line break for small devices -->
+
+              <!-- Special Occasions Section -->
+              <div
+                class="col-12 col-md-3 mb-4 mb-md-0 text-center text-md-start"
+              >
+                <h5 class="text-black">Resources</h5>
+                <ul class="list-unstyled">
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >How it works</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >Partners</a
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+
+              <div class="w-100 d-block d-md-none"></div>
+              <!-- Line break for small devices -->
+
+              <!-- Travel & Vacations Section -->
+              <div class="col-12 col-md-3 text-center text-md-start">
+                <h5 class="text-black">Information</h5>
+                <ul class="list-unstyled">
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >About us</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="#" class="text-muted text-decoration-none text-black"
+                      >Tertimonials</a
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="text-muted mb-0">
+             Copyright @ Global Guide 2024 All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- footer end here  -->
+     <!-- whatapss icons  -->
+     <a href="https://api.whatsapp.com/send?phone=?" target="_blank" class="whatsapp-chat">
+      <i class="fab fa-whatsapp fs-2 bg-transparent"></i>
+  </a>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+  
+  </body>
+</html>
